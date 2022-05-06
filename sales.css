@@ -1,0 +1,78 @@
+#main{
+    width: 95%;
+    height: auto;
+    margin: auto;
+
+}
+img{
+    width: 95%;
+    height: auto; 
+    margin: auto;
+    cursor: pointer;
+}
+#Image2{
+    width: 95%;
+    height: auto; 
+    margin: auto;
+    margin-top: 40px;
+    cursor: pointer;
+}
+h1{
+    text-align: center;
+    font-size: 45px;
+}
+#cards{
+    width: 95%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,auto);
+    gap: 20px;
+    cursor: pointer;
+}
+#offers{
+    width: 100%;
+    height: 150px;
+    background-color: gainsboro;
+    text-align: center;
+    margin-top: 120px;
+    padding-bottom: 10px;
+}
+h2{
+    padding-top: 40px;
+    font-size: 30px;
+}
+#email{
+    width: 20%;
+    height: 40px;
+    background-color: white;
+}
+#submit{
+    padding: 15px 10px 10px 10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+#footer1{
+    width: 90%;
+    margin: auto;
+}
+h5{
+    text-align: center;
+    font-size: 18px;
+}
+p{
+    text-align: center;
+}
+h4{
+    text-align: center;
+    font-size: 25px;
+}
+#Inform{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    margin: auto;
+    cursor: pointer;
+}
+
