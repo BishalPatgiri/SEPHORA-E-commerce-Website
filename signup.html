@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <style>
+            body{
+                background-image:url("home_img.png");
+            }
+            #main{
+                width: 25%;
+                margin: auto; 
+                margin-top: 55px;
+                padding-bottom: 50px;
+                padding-top: 20px;
+                background-color: white;
+            }
+            form{
+               width: 90%;
+               margin: auto;
+               margin-top: -15px;
+            } 
+            form>div>input{
+                width: 75%;
+            }
+            select{
+                border: 2px solid black;
+                width: 21%;
+                height:41px ;
+                color: #746f6f;
+            }
+            h1{
+                text-align: center;
+                font-size: 32px;
+                font-family: Avenir-NextBold;
+                font-weight: bolder;
+                padding: 0px 20% 0px 20%;
+            }
+            p{
+            font-family: Avenir-Next,sans-serif;
+            font-size: 12px;
+            color: #746f6f;
+            }
+
+            input{
+                width: 97%;
+                height: 35px;
+                border: 2px solid black;
+            }
+            #sub{
+                width: 100%;
+                height: 40px;
+                margin-top: 20px;
+                border: 0;
+                color: white;
+                background-color: rgb(228, 39, 175);
+                cursor: pointer;
+                font-weight: 600;
+            }
+            i{
+                margin-left: -30px; 
+                cursor: pointer;
+            }
+            #pass{
+                width: 96%;
+            }
+            a{
+                margin-left: 20px;
+                color: rgb(190, 54, 211);
+                font-size: 35px;
+                cursor: pointer;  
+                text-decoration: none;
+            }
+
+        </style>
+</head>
+<body>
+    <div id="main">
+        <a href="signin.html"><</a>
+        <h1>CREATE ACCOUNT</h1>
+        <form action="" id="form">
+            <p>Name*</p>
+            <div>
+                <select name="Gender" id="gender">
+                    <option value="">Select</option>
+                    <option value="mr">Mr</option>
+                    <option value="ms">Ms</option>
+                </select>
+                <input type="text" id="name">
+            </div>
+            <p>Email*</p>
+            <input type="email" id="email">
+            <p>Password*</p>
+            <input type="password" minlength="8" id="pass">
+            <i class="far fa-eye" id="togglePassword" ></i>
+            <p>Phone Number*</p>
+            <input type="number" id="num">
+            <BR></BR>
+            <input type="submit" value="CONTINUE" id="sub">
+        </form>
+</div>
+</body>
+</html>
+<script>
+document.querySelector('#togglePassword').addEventListener('click', function (e) {
+  const type = document.querySelector('#pass').getAttribute('type') === 'password' ? 'text' : 'password';
+  document.querySelector('#pass').setAttribute('type', type);
+  this.classList.toggle('fa-eye-slash');
+})
+
+document.querySelector("form").addEventListener("submit",data_store)
+
+function data_store(){
+    event.preventDefault();
+    var obj={
+        name:form.name.value,
+        email:form.email.value,
+        password:form.pass.value,
+        phone:form.num.value,
+    }
+    localStorage.setItem("data",JSON.stringify(obj))
+    window.location.href="signin.html"
+}
+</script>
