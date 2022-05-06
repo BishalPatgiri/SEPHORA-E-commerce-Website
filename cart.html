@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart-Page</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <div id="navbar">
+        <h1>My Bag(1)</h1>
+    </div>
+    <div id="cart">
+        <div id="products">
+
+        </div>
+        <div id="overview"></div>
+    </div>
+    
+
+    
+</body>
+</html>
+
+<script>
+   var Cart= JSON.parse(localStorage.getItem("cartData")) ||[];
+
+
+   
+   Cart.forEach(function(elem){
+       var container=document.createElement("div");
+       var img=document.createElement("img")
+       img.src=elem.img
+
+       var name=document.createElement("h3")
+       name.innerText=elem.name;
+
+       var para=document.createElement("p")
+       para.innerText=elem.para
+
+       var para1=document.createElement("p")
+       para1.innerText="Color-no color"
+
+       var favourites=document.createElement("p")
+       favourites.innerText="Move to Favourites"
+
+       var Remove=document.createElement("p")
+       Remove.innerText="Remove"
+
+       var quantity=document.createElement("div")
+
+
+       var price=document.createElement("div")
+       price.innerText=elem.price2  
+
+       
+
+       
+       
+
+       
+
+
+       container.append(img,name,para,para1,favourites,Remove,price)
+
+       document.querySelector("#products").append(container)
+
+    })
+
+
+       
+
+
+
+
+
+       
+
+   
+
+   
+       
+   
+</script>
