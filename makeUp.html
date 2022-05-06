@@ -27,7 +27,7 @@
         <div id="user">
             <a href=""><i class="fa fa-heart"></i></a>
             <a href=""><i class="fa fa-bag-shopping"></i>Cart</a>
-            <a href=""><i class="fa-solid fa-user"></i> </a>
+            <a href=""><i class="fa-solid fa-user"></i> User</a>
         </div>
     </div>
     <div id="Navbar">
@@ -42,12 +42,33 @@
     <div>
        <a href="makeup.html"><img src="https://logan.nnnow.com/content/dam/nnnow-project/27-sep-2021/MakeupDesktop.jpg" alt=""></a> 
     </div>
+    <div id="two">
+        <div>
+            <p>SHOP</p>
+            <p>FACE</p>
+            <p>CHEEK</p>
+            <p>EYE</p>
+            <p>LIP</p>
+            <p>BRUSHES & APPLICATORS</p>
+            <p>ACCESSORIES</p>
+            <p>NAIL</p>
+            <p>MAKEUP PALETTES</p> 
+            <p>VEGAN</p>
+        </div>
+        <div>
+        <img src="https://logan.nnnow.com/content/dam/nnnow-project/16-april-2020/makeup/13APR20_MAKEUP_CB_STRIP1_DESK_1.jpg" alt="" id="small_nav">
+        <div id="Products"></div>
+        </div>
+    </div>
     <div id="Products"></div>
+    <div id="back">
+        <a href=""><button><i class="fa-solid fa-angle-up"></i>  ^ BACK TO TOP</button></a>
+    </div>
     <div id="offers">
         <h2>GET THE LATEST NEWS & OFFERS IN BEAUTY & FASHION</h2>
         <form action="" id="subscribe">
-            <input type="text" placeholder="Enter Your Email Address" id="email">
-            <input type="Submit" id="submit">
+            <input type="text" placeholder="Subscribe Here......" id="email">
+            <button id="btn">SUBSCRIBE</button>
         </form>
     </div>
     <div id="footer1">
@@ -59,7 +80,7 @@
         <p>Shop everything from skincare, to hair products and beauty and get a free tote bag for free! Download the app to check out the hottest products on the go. Get seasonal, daily, and weekly discounts on the coolest international brands via your phone or desktop. Sephora offers discounts and deals specialised for loyal customers so you save more in the long run. Not only are the products high-quality, but they’re all available in a one-stop-shop. Stock up on seasonal beauty to mix-and-match everything in your makeup kit for every occasion, every day.</p>
         <h4>Sephora Offers for office Beauty</h4>
         <p>Why wear the same makeup look to work every week? Sephora understands your need for a new look every day. With slashed prices on makeup palettes, lipsticks, shampoos and conditioners, lip kits, hair treatments, perfume, makeup brushes, and everything else in between, you’re sure to find something to suit your taste. Shop brands like Anastasia Beverly Hills, Estée Lauder, Make Up For Ever, Versace, and so much more for any occasion. With men’s and women’s beauty, grooming, prepping and priming basics are essential for every day dressing. With Sephora’s daily deals, you can shop high-quality essentials for work and everywhere else.</p>
-        <h4>Shop NOW online or on the mobile app</h4>
+        <h4>Shop NNNOW online or on the mobile app</h4>
         <p>A leader in prestige omni-retail, our purpose at Sephora is to create an inviting beauty shopping experience and inspire fearlessness in our community. With an ever-increasing assortment of products from carefully curated brands, featuring indie darlings, emerging favorites, trusted classics, and Sephora’s own, SEPHORA COLLECTION, now the whole family can shop their favourite trends, styles, and essentials online or via the mobile app. With a wide variety of beauty products for every skin type, shop trusted brands, the latest looks, designs and stylish looks from the comfort of your home. Discover online shopping that offers advantages like flat 50% off, swatches and sachets, and discounts with complimentary beauty offers. Get amazing deals on fashion and apparel too with a click of a button on NNNOW.com.</p>
     
     </div>
@@ -68,10 +89,44 @@
         <h6>FREQUENTLY ASKED QUESTIONS</h6>
         <h6>CONTACT US</h6>
     </div>
+    <div id="social_media_container">
+        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-youtube"></i></a>
+    </div>
+    <div id="fine_print_container">
+        <a href="">© 2022 NNNOW </a><span> | </span>
+        <a href=""> Privacy Policy </a><span> | </span>
+        <a href=""> Terms & Conditions </a>
+    </div>
+    <div id="footer_link_container">
+        <div id="footer_link_title_1">BRANDS</div>
+        <div id="footer_link_content_1">
+            <!-- append all brands here -->
+        </div>
+        <div id="footer_link_title_2">MAKEUP</div>
+        <div id="footer_link_content_2">
+            <!-- append all MAKEUP here -->
+        </div>
+        <div id="footer_link_title_3">SKIN CARE</div>
+        <div id="footer_link_content_3">
+            <!-- append all brands here -->
+        </div>
+        <div id="footer_link_title_4">OTHER ACCESORIES</div>
+        <div id="footer_link_content_4">
+            <!-- append all MAKEUP here -->
+        </div>
+        <div id="footer_link_title_5">MY SEPHORA</div>
+        <div id="footer_link_content_5">
+            <!-- append all brands here -->
+        </div>
+    </div>
 </body>
 </html>
 
 <script>
+    document.getElementById("btn").addEventListener("click",subFun);
     var makeupPageData = [
 {img:"https://cdn13.nnnow.com/web-images/medium/styles/A8G6MLDJJNX/1539589327442/1.jpg",offer:"Offer",name:"Sephora Collection",para:"Cream Lip Stain",price2:"Rs.1,200",para2:"2 more offers"},
 {img:"https://cdn11.nnnow.com/web-images/medium/styles/5GUXA2CNECK/1549870626890/1.jpg",offer:"Offer",name:"Shiseido",para:"Modern Matte-Powder Lip Stick",price2:"Rs.2,700",para2:"2 more offers"},
@@ -128,5 +183,9 @@ function addCart(el){
     alert("Product Added to Cart")
 }
 
-
+function subFun(){
+    event.preventDefault();
+    alert("Subscribe Successfully")
+    window.location.reload();
+}
 </script>

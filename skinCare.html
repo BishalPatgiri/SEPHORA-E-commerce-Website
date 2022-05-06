@@ -27,7 +27,7 @@
         <div id="user">
             <a href=""><i class="fa fa-heart"></i></a>
             <a href=""><i class="fa fa-bag-shopping"></i>Cart</a>
-            <a href=""><i class="fa-solid fa-user"></i> </a>
+            <a href=""><i class="fa-solid fa-user"></i> User</a>
         </div>
     </div>
     <div id="Navbar">
@@ -42,12 +42,31 @@
     <div>
        <a href="skincare.html"><img src="https://logan.nnnow.com/content/dam/nnnow-project/27-sep-2021/SkincareDesktop.jpg" alt=""></a> 
     </div>
+    <div id="two">
+        <div>
+            <p>SHOP</p>
+            <p>MOISTURIZERS</p>
+            <p>CLEANSERS</p>
+            <p>TREATMENTS & HIGHTECH TOOLS</p>
+            <p>MASKS</p>
+            <p>BATH & SHOWER</p>
+            <p>BODY MOISTURIZERS</p>
+            <p>VEGAN</p>
+        </div>
+        <div>
+        <img src="https://logan.nnnow.com/content/dam/nnnow-project/16-april-2020/makeup/13APR20_MAKEUP_CB_STRIP1_DESK_1.jpg" alt="" id="small_nav">
+        <div id="Products"></div>
+        </div>
+    </div>
     <div id="Products"></div>
+    <div id="back">
+        <a href=""><button><i class="fa-solid fa-angle-up"></i>  ^ BACK TO TOP</button></a>
+    </div>
     <div id="offers">
         <h2>GET THE LATEST NEWS & OFFERS IN BEAUTY & FASHION</h2>
         <form action="" id="subscribe">
             <input type="text" placeholder="Enter Your Email Address" id="email">
-            <input type="Submit" id="submit">
+            <button id="btn">SUBSCRIBE</button>
         </form>
     </div>
     <div id="footer1">
@@ -68,10 +87,44 @@
         <h6>FREQUENTLY ASKED QUESTIONS</h6>
         <h6>CONTACT US</h6>
     </div>
+    <div id="social_media_container">
+        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-youtube"></i></a>
+    </div>
+    <div id="fine_print_container">
+        <a href="">© 2022 NNNOW </a><span> | </span>
+        <a href=""> Privacy Policy </a><span> | </span>
+        <a href=""> Terms & Conditions </a>
+    </div>
+    <div id="footer_link_container">
+        <div id="footer_link_title_1">BRANDS</div>
+        <div id="footer_link_content_1">
+            <!-- append all brands here -->
+        </div>
+        <div id="footer_link_title_2">MAKEUP</div>
+        <div id="footer_link_content_2">
+            <!-- append all MAKEUP here -->
+        </div>
+        <div id="footer_link_title_3">SKIN CARE</div>
+        <div id="footer_link_content_3">
+            <!-- append all brands here -->
+        </div>
+        <div id="footer_link_title_4">OTHER ACCESORIES</div>
+        <div id="footer_link_content_4">
+            <!-- append all MAKEUP here -->
+        </div>
+        <div id="footer_link_title_5">MY SEPHORA</div>
+        <div id="footer_link_content_5">
+            <!-- append all brands here -->
+        </div>
+    </div>
 </body>
 </html>
 
 <script>
+    document.getElementById("btn").addEventListener("click",subFun);
     var makeupPageData = [
 {img:"https://cdn06.nnnow.com/web-images/medium/styles/CE47TVIQ8DA/1542965062673/1.jpg",offer:"Offer",name:"Shiseido",para:"Oil Control Blotting Paper",price2:"Rs.1,200",para2:"2 more offers"},
 {img:"https://cdn12.nnnow.com/web-images/medium/styles/ALWTG854WAT/1519382075957/1.jpg",offer:"Offer",name:"Shiseido",para:"Glow Revival Eye Treatment",price2:"Rs.4,100",para2:"2 more offers"},
@@ -130,5 +183,9 @@ function addCart(el){
     alert("Product Added to Cart")
 }
 
-
+function subFun(){
+    event.preventDefault();
+    alert("Subscribe Successfully")
+    window.location.reload();
+}
 </script>

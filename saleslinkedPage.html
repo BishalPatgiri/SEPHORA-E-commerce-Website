@@ -27,22 +27,22 @@
         <div id="user">
             <a href=""><i class="fa fa-heart"></i></a>
             <a href=""><i class="fa fa-bag-shopping"></i>Cart</a>
-            <a href=""><i class="fa-solid fa-user"></i> </a>
+            <a href=""><i class="fa-solid fa-user"></i>User</a>
         </div>
     </div>
     <div id="Navbar">
-        <a href="sales.html"><h4>SALE</h4></a>
-        <a href="makeUp.html"><h4>MAKEUP</h4></a>
-        <a href="skinCare.html"><h4>SKINCARE</h4></a>
-        <a href="fragrance.html"><h4>FRAGRANCE</h4></a>
-        <a href=""><h4>HAIRCARE</h4></a>
-        <a href=""><h4>TOOLS & BRUSHES</h4></a>
-        <a href=""><h4>BRANDS</h4></a>
+        <a href="sales.html"><h5>SALE</h5></a>
+        <a href="makeUp.html"><h5>MAKEUP</h5></a>
+        <a href="skinCare.html"><h5>SKINCARE</h5></a>
+        <a href="fragrance.html"><h5>FRAGRANCE</h5></a>
+        <a href=""><h5>HAIRCARE</h5></a>
+        <a href=""><h5>TOOLS & BRUSHES</h5></a>
+        <a href=""><h5>BRANDS</h5></a>
     </div>
    <div id="container">
        <div id="sepCollection1">
            <form action="" id="form1">
-        <h2>FILTER BY</h2>
+        <h2>Filter By</h2>
         <select name="" id="filter1" onChange="filterFun()">
             <option value="">Filter by Brand</option>
             <option value="CLARINS">CLARINS</option>
@@ -79,7 +79,7 @@
        </div>
        <div></div>
        <div id="sepCollection3">
-           <h2>SORT:</h2>
+           <h2>Sort:</h2>
         <select name="" id="sort" onChange="priceSort()">
             <option value="Popularity">Popularity</option>
             <option value="Newest">Newest</option>
@@ -90,11 +90,15 @@
     </div>
    </div>
    <div id="products"></div>
+   <div id="back">
+    <a href=""><button><i class="fa-solid fa-angle-up"></i>  ^ BACK TO TOP</button></a>
+</div>
    <div id="offers">
-    <h2>GET THE LATEST NEWS & OFFERS IN BEAUTY & FASHION</h2>
+    <h4>GET THE LATEST NEWS & OFFERS IN BEAUTY & FASHION</h4>
     <form action="" id="subscribe">
-        <input type="text" placeholder="Enter Your Email Address" id="email">
-        <input type="Submit" id="submit">
+        <input type="text" placeholder="Subscribe Here...." id="email">
+        <!-- <input type="Submit" id="submit"> -->
+        <button id="btn">SUBSCRIBE</button>
     </form>
 </div>
 <div id="footer1">
@@ -106,7 +110,7 @@
     <p>Shop everything from skincare, to hair products and beauty and get a free tote bag for free! Download the app to check out the hottest products on the go. Get seasonal, daily, and weekly discounts on the coolest international brands via your phone or desktop. Sephora offers discounts and deals specialised for loyal customers so you save more in the long run. Not only are the products high-quality, but they’re all available in a one-stop-shop. Stock up on seasonal beauty to mix-and-match everything in your makeup kit for every occasion, every day.</p>
     <h5>Sephora Offers for office Beauty</h5>
     <p>Why wear the same makeup look to work every week? Sephora understands your need for a new look every day. With slashed prices on makeup palettes, lipsticks, shampoos and conditioners, lip kits, hair treatments, perfume, makeup brushes, and everything else in between, you’re sure to find something to suit your taste. Shop brands like Anastasia Beverly Hills, Estée Lauder, Make Up For Ever, Versace, and so much more for any occasion. With men’s and women’s beauty, grooming, prepping and priming basics are essential for every day dressing. With Sephora’s daily deals, you can shop high-quality essentials for work and everywhere else.</p>
-    <h5>Shop NOW online or on the mobile app</h5>
+    <h5>Shop NNNOW online or on the mobile app</h5>
     <p>A leader in prestige omni-retail, our purpose at Sephora is to create an inviting beauty shopping experience and inspire fearlessness in our community. With an ever-increasing assortment of products from carefully curated brands, featuring indie darlings, emerging favorites, trusted classics, and Sephora’s own, SEPHORA COLLECTION, now the whole family can shop their favourite trends, styles, and essentials online or via the mobile app. With a wide variety of beauty products for every skin type, shop trusted brands, the latest looks, designs and stylish looks from the comfort of your home. Discover online shopping that offers advantages like flat 50% off, swatches and sachets, and discounts with complimentary beauty offers. Get amazing deals on fashion and apparel too with a click of a button on NNNOW.com.</p>
 
 </div>
@@ -115,11 +119,45 @@
     <h5>FREQUENTLY ASKED QUESTIONS</h5>
     <h5>CONTACT US</h5>
 </div>
+<div id="social_media_container">
+    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+    <a href=""><i class="fa-brands fa-instagram"></i></a>
+    <a href=""><i class="fa-brands fa-twitter"></i></a>
+    <a href=""><i class="fa-brands fa-youtube"></i></a>
+</div>
+<div id="fine_print_container">
+    <a href="">© 2022 NNNOW </a><span> | </span>
+    <a href=""> Privacy Policy </a><span> | </span>
+    <a href=""> Terms & Conditions </a>
+</div>
+<div id="footer_link_container">
+    <div id="footer_link_title_1">BRANDS</div>
+    <div id="footer_link_content_1">
+        <!-- append all brands here -->
+    </div>
+    <div id="footer_link_title_2">MAKEUP</div>
+    <div id="footer_link_content_2">
+        <!-- append all MAKEUP here -->
+    </div>
+    <div id="footer_link_title_3">SKIN CARE</div>
+    <div id="footer_link_content_3">
+        <!-- append all brands here -->
+    </div>
+    <div id="footer_link_title_4">OTHER ACCESORIES</div>
+    <div id="footer_link_content_4">
+        <!-- append all MAKEUP here -->
+    </div>
+    <div id="footer_link_title_5">MY SEPHORA</div>
+    <div id="footer_link_content_5">
+        <!-- append all brands here -->
+    </div>
+</div>
 
 </body>
 </html>
 
 <script>
+    document.getElementById("btn").addEventListener("click",subFun);
      
     var productData = [
 {img:"https://cdn03.nnnow.com/web-images/medium/styles/ET4JCZHQEH3/1594031464953/1.jpg",offer:"New",name:"Clarins",para:"SOS Pure Rebalancing Clay Mask",price1:"Rs.2,200",price2:"Rs.2,200",discount:"(0% Off)",para2:"2 more offers"},
@@ -154,6 +192,7 @@ function priceSort(){
         })
         displayFun(productData)
         console.log(productData)
+        window.location.reload()
     }
 }
 function filterFun(){
@@ -165,6 +204,7 @@ function filterFun(){
     })
     displayFun(filteredList);
     console.log(filteredList)
+    window.location.reload()
 }
 var cartArr = JSON.parse(localStorage.getItem("cartData")) || [];
 function displayFun(data){
@@ -187,7 +227,7 @@ function displayFun(data){
         Discount.innerText = el.discount;
         PRICE.append(Price,Pric,Discount);
         var cart = document.createElement("h5");
-        cart.innerText = "Add to Cart";
+        cart.innerText = "Add Cart";
         cart.addEventListener("click",function(){
             addCart(el);
         })
@@ -200,6 +240,11 @@ function addCart(el){
     cartArr.push(el);
     localStorage.setItem("cartData",JSON.stringify(cartArr));
     alert("Product Added to Cart")
+}
+function subFun(){
+    event.preventDefault();
+    alert("Subscribe Successfully")
+    window.location.reload();
 }
 
 </script>
