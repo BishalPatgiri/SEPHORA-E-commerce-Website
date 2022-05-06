@@ -2,12 +2,17 @@
     background-color:rgb(218, 212, 212);
     width:100%;
     display: flex;
-    justify-content: space-evenly;
+    padding-left: 100px;
+    padding-right: 100px;
+    justify-content: space-around;
     align-items: center;
 }
 #navbar img {
     width:100px;
     
+}
+span{
+    color: rgb(209, 75, 97);
 }
 a {
         text-decoration: none;
@@ -60,6 +65,10 @@ a {
       top:0px;
       left:0px;
   }
+  #user>a{
+      border-left: 0.5px solid rgb(173, 170, 170);
+      padding-left: 20px;
+  }
   #navbar_III {
       width:90%;
       margin:auto;
@@ -72,6 +81,15 @@ a {
       top:0px;
       margin-bottom: 100px;
   }
+  #navbar_III>a{
+      font-weight: bold;
+    padding:0 10px 0 10px;
+    color:black;
+  }
+  #navbar_III>a:hover {
+      color:rgb(209, 75, 97);
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    }
   #user{
       width:30%;
   }
