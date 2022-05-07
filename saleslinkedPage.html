@@ -26,7 +26,7 @@
         <h1>SEPHORA</h1>
         <div id="user">
             <a href=""><i class="fa fa-heart"></i></a>
-            <a href=""><i class="fa fa-bag-shopping"></i>Cart</a>
+            <a href="cart.html"><i class="fa fa-bag-shopping"></i>Cart</a>
             <a href=""><i class="fa-solid fa-user"></i>User</a>
         </div>
     </div>
@@ -45,11 +45,11 @@
         <h2>Filter By</h2>
         <select name="" id="filter1" onChange="filterFun()">
             <option value="">Filter by Brand</option>
-            <option value="CLARINS">CLARINS</option>
+            <option value="Clarins">CLARINS</option>
             <option value="PIXI">PIXI</option>
-            <option value="ABHATI SUISSE">ABHATI SUISSE</option>
-            <option value="FOREO">FOREO</option>
-            <option value="ANASTASIA BEVERLY HILLS">ANASTASIA BEVERLY HILLS</option>
+            <option value="Abhati Suisse">ABHATI SUISSE</option>
+            <option value="Foreo">FOREO</option>
+            <option value="Anastasia Beverly Hills">ANASTASIA BEVERLY HILLS</option>
             <option value="Sephora Collection">Sephora Collection</option>
         </select>
         <select name="" id="filter2">
@@ -83,6 +83,7 @@
         <select name="" id="sort" onChange="priceSort()">
             <option value="Popularity">Popularity</option>
             <option value="Newest">Newest</option>
+            <!-- <option value="">Sort by Price</option> -->
             <option value="LTH">Price:Low to High</option>
             <option value="HTL">Price:High to Low</option>
             <option value="Discount">Discount</option>
@@ -183,18 +184,26 @@
 {img:"https://cdn02.nnnow.com/web-images/medium/styles/GDOH1VY93XF/1583404426726/1.jpg",offer:"Offer",name:"PIXI",para:"Summer Glow Pallette",price1:"Rs.1,900",price2:"Rs.1,740",discount:"(6% Off)",para2:"2 more offers"},]
 
 displayFun(productData);
+
 function priceSort(){
-    var selected = document.getElementById("sort").value;
-    console.log(selected)
-    if(selected=="LTH"){
-        productData.sort(function(a,b){
-            return a.price2-b.price2;
-        })
-        displayFun(productData)
-        console.log(productData)
-        window.location.reload()
+      console.log("clicked")
+     var selected = document.querySelector("#sort").value;
+     console.log(selected)
+     if(selected=="HTL"){
+       productData.sort(function(a,b){
+         return b.price2-a.price2;
+         
+       })
+       displayFun(productData);
+     }
+     if(selected=="LTH"){
+       productData.sort(function(a,b){
+        return a.price2-b.price2
+       })
+       displayFun(productData);
+     }
     }
-}
+
 function filterFun(){
     console.log("clicked")
     var selected = document.querySelector("#filter1").value;
@@ -204,10 +213,11 @@ function filterFun(){
     })
     displayFun(filteredList);
     console.log(filteredList)
-    window.location.reload()
+    // window.location.reload()
 }
 var cartArr = JSON.parse(localStorage.getItem("cartData")) || [];
 function displayFun(data){
+    document.querySelector("#products").innerHTML = "";
     data.forEach(function(el){
         var box = document.createElement("div");
         var Imag = document.createElement("img");
