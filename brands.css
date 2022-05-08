@@ -106,17 +106,20 @@ body>p{
     text-align: center;
     font-weight: 100;
 }
-#dibba{
+ #dibba{
     border: 0;
     width: 30%;
+    height: 50px;
     padding: 10px;
     background: #000;
     font-weight: 600;
     color: #383838;
     display: block;
     margin: auto;
-    margin-bottom: 50px;
-}
+    margin-bottom: 30px;
+
+    /* margin-bottom: 50px; */
+}  
 
  #box{
   display: flex;
@@ -126,6 +129,7 @@ body>p{
 }
 hr{
   width: 60%;
+  margin-bottom: 50px;
 }
 
 #box>div>h1{
@@ -190,6 +194,15 @@ hr{
     color: black;
 }
 
+#social_media_container{
+  width:30%;
+  margin:auto;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 
 #fine_print_container {
   width:40%;
@@ -219,3 +232,13 @@ hr{
   border-right:1px solid gray;
   font-size: 15px;
 }
+
+.fa-search{
+  color: #f39;
+}
+
+
+/* Style the search field */
+
+
+/* Clear floats */
