@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <title>Document</title>
     <style>
         body{
@@ -84,11 +85,12 @@
 </body>
 </html>
 <script>
-  document.querySelector('#togglePassword').addEventListener('click', function (e) {
+
+document.querySelector('#togglePassword').addEventListener('click', function (e) {
   const type = document.querySelector('#pass').getAttribute('type') === 'password' ? 'text' : 'password';
   document.querySelector('#pass').setAttribute('type', type);
   this.classList.toggle('fa-eye-slash');
-});
+})
 
 var data=JSON.parse(localStorage.getItem("data"))
 document.querySelector("#btn").addEventListener("click",pass_check)
@@ -97,7 +99,13 @@ function pass_check(){
     var pass=document.querySelector("#pass").value
     if(pass==data.password)
     {
-        console.log("come In")
+        alert("Successfuly Loged In")
+        window.location.href="homepage.html"
+        localStorage.setItem("logIn","Yes")
+    }
+    else{
+        alert("Wrong Password!! Try again")
+        localStorage.setItem("logIn","No")
     }
 }
 

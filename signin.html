@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SignIn</title>
     <style>
      body{
                 background-image:url("home_img.png");
@@ -102,7 +102,7 @@
 </head>
 <body>
     <div id="main">
-        <a href="Home page" id="cross">X</a>
+        <a href="homepage.html" id="cross">X</a>
         <h1>LOGIN</h1>
         <p>Enter Your Phone/Email</p>
         <input type="email" id="email">
@@ -133,11 +133,11 @@ function check(){
     var email=document.querySelector("#email").value
     if(email==data.email)
     {
-        console.log("Hello Dera")
         window.location.href="check.html"
     }
     else
     {
+        alert("You don't have an account with us. Create one !!")
         window.location.href="signup.html"
     }
 } 
