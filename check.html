@@ -10,7 +10,7 @@
         body{
             background-image:url("home_img.png");
         }
-        div{
+        body>div{
             width: 25%;
             margin: auto;
             margin-top: 60px;
@@ -66,6 +66,19 @@
                 color: rgb(191, 53, 229);
                 cursor: pointer;
             }
+            @media all and (min-width: 761px) and (max-width:1000px)
+        {
+            body>div{
+                width: 30%;
+            }
+        }
+
+        @media all and (min-width: 451px) and (max-width:760px)
+        {
+            body>div{
+                width: 45%;
+            }
+        }
 
     </style>
 </head>
