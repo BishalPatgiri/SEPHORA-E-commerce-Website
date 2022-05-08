@@ -6,80 +6,197 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart-Page</title>
     <link rel="stylesheet" href="cart.css">
-</head>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=z1obs1vnmcKmI-kDXicAX7AiJsgRAbOo5diA5ibNDGfwEZTqeFmtAmT2ibjB1_1FURlWZAP38YPSE7PMajvX0DegiHqpuiYas13hyKxQ_sk15AyVj1HUBt39ckvhUPZGwLxFrnUHdOfTpdfxC0aaaPZyOsMPwW-wiO05cwgH8FY7DQno8QQKWJJ5dadLCAUfaba59HhEUJEjhOGfy6NA6eQtJhoS5lpUOOS-QNqqLIEOfnbEExrbNjjrJ7QifbeYKqljq2fGmNJU5CkLtn0PjrLToU6RH_bXY_0Jh_41BG4XJw30vg-Slk1bLLWoSiDTtgJzpODO_UiMD-D9-RbWey3lL4tF3DpbvJmTqEQIyRnpiISr-OYERoA9Rw2TpSMnFheWjDOUiWNP3Om-olC-E4TE54Oj0TU06H6g5aaTfcb872Yh74yYVp2LWuk0CISZgiD-ekPXb7CSSvIHGcJYjqlTWPfu0ITpKEDVsFy868aOzE3k-MCqfoeAPmqerYxNg5w5XxfEo_CSqRJCAxodvKWMwPQn2CxBllanqz6y5O_vlU2WOdEE_78Go0r_TYKbcBZ6V3cShHWGeu6F6nLotnvi9xJ6TeCV56orc_U_SIudcJfppbyfujGihK2FrwPWXH7aloe9eF8LxJnURxZHIHc25Y66zkFAwRSaoDn7ytYvfilG6dVbRNVvrI3DTDREhqnvmcknr4XJNKNGV5yjIwL65G_XwW8YehQRa3OlzamlwKPTX0ukAWZdstcjZVkircNHJ7HWllkDG-z-YR1XlJVO9cbdbFfFS55JlMk-OcMZpVGGD4qfgamPsaOpRFf-qvjZQp76QzXB8oP41C89NnMkZeairXqTEU7Om6G4dbMp2cKWrV3Vh5qEEOlBTgw3gGkNYnmm-Y1TY7H4JaFBmDfRDxXvMpqyMhmPxCdsBUqaKy6lrCj3Ahnk8sfbhqwMi49Vj3LlJ7ybeGwTKOs_6RARiPZdIDf_Lmm1GBWtfcLdGlF6ZLfGkYyRujNo6QQcfrJgJQRoFxXVTBYiJvuqR6jLKixn76qx4I0__79syLAq7Y-mttG6EB-cyZsnfm4Y3n4CUQQEjhNGCw_orVx3tpQRl4TxRobQ4EC2zfvV2ncbHgZvejLlw56DZ7uW6K7sKN2jKUadP79ZahnGj-YH-uL7O3nifcLUUTjP0Gu_FA7Kv8GNSZ4vD-7LnyAGAgO2_92wYXoiKa68xh2QWqblV3DtwwMfi93uN3-3sZR8-mzuNhZwtjlX3UECZPiWsLQcn0fLFWPk09Dhtcfw0vqYFnMwa3Ya6XNwY1VvgA9sqVg" charset="UTF-8"></script></head>
 <body>
-    <div id="navbar">
-        <h1>My Bag(1)</h1>
+    <div id="first">
+        <p>SEPHORA</p>
+        <select name="" id="name">
+            <option value="">Bishal</option>
+            <option value="My Account">My Account</option>
+            <option value="Favroutes">Favroutes</option>
+            <option value="My Orders">My Orders</option>
+            <option value="Sign Out">Sign Out</option>
+        </select>
     </div>
-    <div id="cart">
-        <div id="products">
+    <h2>My Bag(<span id="bag"></span>)</h2>
+    <div id="content">
+        <main>
+            <table>
+                <tbody id="body">
 
+                </tbody>
+            </table>
+        </main> 
+        <div id="left_div">
+            <button id="butn">APPLY PROMO CODE</button>
+            <div>
+                <table id="overview">
+                    <tr>
+                        <td><h3>OVERVIEW</h3></td>
+                    </tr>
+                    <tr>
+                        <td><p>Subtotal</p></td>
+                        <td id="subtotal"></td>
+                    </tr>
+                    <tr>
+                        <td><p style="color: rgb(235, 57, 226);">Discount</p></td>
+                        <td ><span id="discount"></span>%</td>
+                    </tr>
+                    <tr>
+                        <td><p>GST</p></td>
+                        <td ><span id="gst">18</span>%</td>
+                    </tr>
+                    <tr>
+                        <td><p>Delivery Charges</p></td>
+                        <td id="delivery">0</td>
+                    </tr>
+                    <tr>
+                        <td><h4>Total</h4></td>
+                        <td id="total"></td>
+                    </tr>
+                </table>
+            </div>
+            <button id="checkout">CHECKOUT</button>
+            <button id="seemore">SEE MORE</button>
         </div>
-        <div id="overview"></div>
     </div>
-    
-
-    
 </body>
 </html>
 
 <script>
-   var Cart= JSON.parse(localStorage.getItem("cartData")) ||[];
+   var cart= JSON.parse(localStorage.getItem("cartData"));
+   cart.forEach(function(elem,index){
 
-
-   
-   Cart.forEach(function(elem){
-       var container=document.createElement("div");
+       var container=document.createElement("tr");
+       var td1=document.createElement("td")
        var img=document.createElement("img")
-       img.src=elem.img
+       img.setAttribute("src",elem.img)
+       td1.append(img)
 
-       var name=document.createElement("h3")
+       var td2=document.createElement("td")
+
+       var name=document.createElement("p")
        name.innerText=elem.name;
 
-       var para=document.createElement("p")
+       var para=document.createElement("h3")
        para.innerText=elem.para
 
        var para1=document.createElement("p")
        para1.innerText="Color-no color"
 
+       var div=document.createElement("div")
+       div.setAttribute("id","btn")
+       div.style.display="flex"
+
        var favourites=document.createElement("p")
        favourites.innerText="Move to Favourites"
+       
+       favourites.addEventListener("click",function(){
+           addtofavourite(elem)
+          
+       })
 
-       var Remove=document.createElement("p")
-       Remove.innerText="Remove"
+       var remove=document.createElement("p")
+       remove.innerText="Remove"
+       
+       remove.addEventListener("click", function(){
+           remove_item(elem,index);
+        //    cart.splice(index,1)
+        //    localStorage.setItem("cartData",JSON.stringify(cart))
+        //    window.location.reload();
+       })
 
+       div.append(favourites,remove)
+       td2.append(name,para,para1,div)
+
+       var td3=document.createElement("td")
        var quantity=document.createElement("div")
+       quantity.setAttribute("id","qty")
+       quantity.style.display="flex"
 
+       var p=document.createElement("p")
+       p.innerText="Qty"
+       var num=document.createElement("select")
 
-       var price=document.createElement("div")
-       price.innerText=elem.price2  
+       var op1=document.createElement("option")
+       op1.setAttribute("value",1)
+       op1.innerText=1
 
-       
+       var op2=document.createElement("option")
+       op2.setAttribute("value",2)
+       op2.innerText=2
 
-       
-       
+       var op3=document.createElement("option")
+       op3.setAttribute("value",3)
+       op3.innerText=3
 
-       
+       var op4=document.createElement("option")
+       op4.setAttribute("value",4)
+       op4.innerText=4
 
+       num.append(op1,op2,op3,op4)
+       quantity.append(p,num)
+       td3.append(quantity)
 
-       container.append(img,name,para,para1,favourites,Remove,price)
+       var td4=document.createElement("td")
+       td4.innerText=elem.price2
 
-       document.querySelector("#products").append(container)
+       document.querySelector("#delivery").innerText=100
+
+       container.append(td1,td2,td3,td4)
+       document.querySelector("#body").append(container)
 
     })
+    
+    function remove_item(elem,index){
+        cart.splice(index,1);
+        localStorage.setItem("cartData",JSON.stringify(cart))
+        window.location.reload();
+    }
+
+    document.querySelector("#butn").addEventListener("click",go)
+    function go(){
+        window.location.href="applypromo.html"
+    }
+
+    var subtotal=cart.reduce(function(sum,elem)
+    {
+        return sum+Number(elem.price2);
+        
+    },0);
 
 
-       
+    var promo=JSON.parse(localStorage.getItem("promo"))
+    document.querySelector("#discount").innerText=promo
+    // console.log(promo)
 
+    
+   var delivery=document.querySelector("#delivery").innerText
+   var gst=document.querySelector("#gst").innerText
+   var discount=promo
 
-
-
-
-       
 
    
-
    
-       
+    
+   document.querySelector("#subtotal").innerText=subtotal;
+   var total=subtotal+Number(delivery)-Number((discount*subtotal)/100)+Number((gst*subtotal)/100);
+//    console.log(subtotal);
+
+   document.querySelector("#total").innerText=total
+
+   localStorage.setItem("total",JSON.stringify(total))
+
+   document.querySelector("#bag").innerText=cart.length;
+
+   document.querySelector("#first>p").addEventListener("click",go_home)
+   function go_home(){
+       window.location.href="homepage.html"
+   }
+
+document.querySelector("#checkout").addEventListener("click",go_payment)    
+function go_payment(){
+    window.location.href="newpayment.html"
+} 
    
 </script>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promo Code</title>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=c67yqGNRFZeiebRwe7D6xdlYbIkt3ANpIwaaAQLNW9o9slEubTIQjwHMB12hsAWiF4E-xOVaBSl5dsjJfuhBE7R0Yabl-j78oBF3RipNirNcCbz6VPAczebleYq7OdN6ERDJaq2lsCk4ZV0vWDsQK7UKYtNaKYXTqoo79hk4ulspRmXAlAn_hSXqjU1Oz0v8sXKW53NyILApA5P44T4vGu6zKAHR5GfCquOWof_ZJzECZCh9LM8ZWqNJ49K93n2jWIA6Td2-v3jX7h9_OctBY8sVL9c8PSck9a5w421czqy0DRfSgO4E1WFisY9EFU95Koq5GS73VtuB5mvt_-5YSMCm-6H3zD-PgcmRpJuiWweKIVb9JF1Pixkt4X55X87jRxE5Z7Jtc7ZSJmKQVTBGsw-5VzJX9Gqz9_NABkpbVfLU3otj6HErHmMk0C0G4mCZPCIsIjZsM9D1b-9dw_IexpcFXvDb3nesIozG0jabqrgjRHGrBuUg1VTWv92Ii_oZkKxWMhVddL9ltaORbORxzRyAYbpQ5DcY3gdvRLnRLektS0DpykUEi-3QNTv_QvL5Ln386CTCTeDX2QahYSsgiKM61v5OT4eGWvGhdj9RXJjUNtQbRblfijK4Fgk3wMf5rt_TUwyTSBWCfZzNp2PPHhhDH1T-VYmJWOH2Xs8L8unp732aX4fLghnTSq8j_iuWjvpxLD91Rm9AQ6KfPY3SglciKGN3pSg08XUzdHJrZcaVy7JJnAnRcL4k2P5tYV6BTquxTl80NvWsLx9DiE6rpWhXNjhxOvDjFKqrt7xRGfSeUx7fU6_HXNO744u7TOxK9aPaCYKyeYtDRpLUAguEs8nYI0GLa_dfc-LlZL4evNWGvp94CmDNtjg9FSeDRwjHNhRhnSwCibj3-iArMXgtT3UFZWTFbCrn2LB-bJtGFZXgrXNH34GLQk0w27tr_BQ5YBKGDtIRuPpf-k-0B6ULnwos5fBj4O4-x-rwwpP6HUApKj5T-b8lAE8MA4XUZG4xvcwcihnfkjgPwqIEI0q7zvoUQhVrvrtQGq5EuwerCsWXufKiwJyRQ1pJfRnthWXt5a0pubaxeuzqN6Xyt2sk8x1YWYEOLprsrmYDINIOvZ7vimzQauE8hdhYIR2z9OUI169PsxpqsEI22f_avVcww27JCZblUf-x7dMoHNk_MINxdOO1xReyqJaZXZCwwgNZhznCOA7QIhcReM8bTCIi9QdmBMGAMV_E0yWKvzQivcKRw7ds6WjFXSS0bLbAKYc-BPdvlK1tAkIJ4iXcXU16ny7cXYHzdKLw25hO_uFdak0l9nhEnHsY1ixpi4KEC9ItdtcuUmlAQCaQT3kosE4202HMoy2W8snAtOErxujKzId8RkAe1LXZ4hYHwT7nl-hpUly3UDon6pnZsT9dA4bXPQ" charset="UTF-8"></script><style>
+        div{
+            width: 30%;
+            margin: auto;
+            margin-top: 100px;
+            background-color: white;
+            text-align: center;
+        }
+        body{
+            background-color: rgb(132, 123, 123);
+        }
+        input{
+            width: 90%;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        button{
+            width: 100px;
+            border-radius: 8px;
+            padding: 5px;
+            margin-bottom: 25px;
+        }
+        button:hover{
+            color: white;
+            background-color: rgb(24, 106, 237);
+        }
+        p{
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 20px;
+            padding-top: 20px;
+            cursor: pointer;
+            color: rgb(231, 72, 223);
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <p>X</p>
+        <h1>APPLY PROMO CODE</h1>
+        <input type="text" placeholder="Enter Promo Code">
+        <button>Submit</button>
+    </div>
+    
+</body>
+</html>
+<script>
+    document.querySelector("button").addEventListener("click",store)
+
+    function store(){
+        var input=document.querySelector("input").value
+        if(input=="masai30")
+        {
+            localStorage.setItem("promo",JSON.stringify(30))
+            window.location.href="cart.html"
+        }
+        else{
+            localStorage.setItem("promo",JSON.stringify(0))
+            alert("Wronge Promo Code")
+            window.location.href="cart.html"
+        }
+    }
+
+    document.querySelector("p").addEventListener("click",redirect)
+    function redirect(){
+        window.location.href="cart.html"
+    }
+</script>
