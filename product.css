@@ -1,3 +1,4 @@
+
 #navbar {
     background-color: rgb(243, 243, 243);
     width:100%;
@@ -98,105 +99,194 @@ a {
 
 
 
- 
- img{
-    width: 60%;
-    display: flex;
-    margin: auto; 
-    margin-bottom: 30px;
-}
-body>#box{
-    display:flex;
-    height: auto;
-    width: 60%;
-    /* border: 1px solid black; */
-    margin: auto;
-}
 
-body>div>div:nth-child(1){
-    width: 25%;
+img{
+    width: 90%;
     height: auto;
-    /* border: 1px solid black; */
-    margin-top: 30px;
-}
-body>div>div:nth-child(2){
-    width: 75%;
-    height: auto;
-    /* border: 1px solid black; */ 
-}
-h6+div{
-    display: flex;
+    display: block;
     margin: auto;
-    /* border: 1px solid black; */
-    gap: 30px;
-    /* height:auto; */
+    margin-top: 40px;
 }
-div>p{
-    font-size: 13px;
+#Products{
+    width: 95%;
+    height: auto;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,auto);
+    gap: 20px;
+    margin-bottom: 80px;
 }
-div>img{
-    width: 100%;
-    margin-top: 30px;
-    padding: 15px;
-}
-div>h6{
-    margin-top: -15px;
-    justify-content: end;
-    display: flex;
-    
-}
-.container>p{
-    font-size: 25px;
-    font-weight: 600;
-}
-.container>div>h5,p{
+h3{
     text-align: center;
+    color: red;
 }
-p+h5+p{
-    font-size: 10px;
+h4{
+    text-align: center;
+    font-size: 15px;
 }
-body>#box>div>p{
-    text-align: initial;
-} 
+img{
+    width: 90%;
+}
+h4+p{
+    text-align: center;
+    color: black;
+    font-size: small;
+}
+div>h5{
+    color: black
+}
+div>h5+h5{
+    color: red
+}
+h5{
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    background-color :beige
+}
+h5:hover{
+    background-color: green;
+}
 #offers{
     width: 100%;
     height: 150px;
+    background-color: rgb(243, 243, 243);
     text-align: center;
-    margin: auto;
-    background-color: rgb(242, 242, 242);
-    /* padding: 80px; */
-    margin-bottom: 100px;
-    padding-bottom: 150px;
-    padding-top: 20px;
-    
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+}
+h2{
+    padding-top: 40px;
+    font-size: 30px;
+}
+#email{
+    width: 20%;
+    height: 40px;
+    background-color: white;
+}
+#submit{
+    padding: 15px 10px 10px 10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
 }
 #footer1{
-    
-    width: 70%;
-    text-align: center;
+    width: 90%;
     margin: auto;
+}
+h5{
+    text-align: center;
+    font-size: 17px;
+    width: 60%;
+    height: 50px;
+    padding: 15px;
+}
+h5+p{
+    text-align: center;
+    color: gray;
+}
+h3{
+    text-align: center;
+    font-size: 22px;
 }
 #Inform{
-    width: 60%;
-    text-align: center;
-    margin: auto;
     display: flex;
     justify-content: space-around;
-    margin-top: 50px;
-    color: black;
-    font-size: large;
-    font-weight:900;
-
+    width: 40%;
+    margin: auto;
+    cursor: pointer;
 }
-
-form>input{
-    border: 20px solid white;
-    width: 15%;
-
-}
-input+button{
-    border: 20px  solid;
-    background-color: white;
+a{
+    text-decoration: none;
     color: black;
 }
 
+  
+  
+  
+  
+#fine_print_container {
+    width:40%;
+    margin:auto;
+    padding:30px 0px 20px;
+    size:12px;
+    display:flex;
+    justify-content:space-evenly;
+}
+#footer_link_title_1,#footer_link_title_2,#footer_link_title_3,#footer_link_title_4,#footer_link_title_5{
+    text-align: center;
+    margin-top: 30PX;
+    font-weight: bold;
+    font-size: 16px;
+    padding:0px px 5px 5px;
+}
+#footer_link_content_1,#footer_link_content_2,#footer_link_content_3,#footer_link_content_4,#footer_link_content_5{
+    width:90%;
+    margin:auto;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    
+}
+#footer_link_content_1>a, #footer_link_content_2>a,#footer_link_content_3>a, #footer_link_content_4>a,#footer_link_content_5>a{
+    padding:3px 10px 3px 10px;
+    border-right:1px solid gray;
+    font-size: 15px;
+}
+button{
+    padding: 10px 10px 10px 10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+#user>a+a{
+    margin-left: 30px;
+    }
+    #back {
+        width:200px;
+        margin:auto;
+        display:grid;
+        margin-bottom: -25px;
+        
+    }
+    #back>button {
+        display: flex;
+        padding:20px;
+        font-weight: bold;
+        justify-content:space-around;
+        border:0px;
+    }
+    #back>button:hover{
+        cursor: pointer;
+    }
+    a>button{
+        background-color: rgb(200, 231, 25);
+        border: 0ch;
+        color: black;
+        padding: 20px 25px 20px 25px;
+        font-weight: bold;
+    }
+    #two{
+        width: 90%;
+        margin: auto;
+        margin-top: 50px;
+        display: flex;
+    }
+    #two>p{
+        font-family: Avenir-Next;
+        font-size: 10px;
+        color: rgb(90, 85, 85);
+    }
+    #two>div>p:nth-child(1){
+        font-family: Avenir-NextBold;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    #two>div:nth-child(2){
+        width: 72%;
+        margin-left: 9%;
+    }
+ 
+    

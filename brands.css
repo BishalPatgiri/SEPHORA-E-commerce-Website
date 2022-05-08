@@ -189,3 +189,33 @@ hr{
     background-color: white;
     color: black;
 }
+
+
+#fine_print_container {
+  width:40%;
+  margin:auto;
+  padding:30px 0px 20px;
+  size:12px;
+  display:flex;
+  justify-content:space-evenly;
+}
+#footer_link_title_1,#footer_link_title_2,#footer_link_title_3,#footer_link_title_4,#footer_link_title_5{
+  text-align: center;
+  margin-top: 30PX;
+  font-weight: bold;
+  font-size: 16px;
+  padding:0px px 5px 5px;
+}
+#footer_link_content_1,#footer_link_content_2,#footer_link_content_3,#footer_link_content_4,#footer_link_content_5{
+  width:90%;
+  margin:auto;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  
+}
+#footer_link_content_1>a, #footer_link_content_2>a,#footer_link_content_3>a, #footer_link_content_4>a,#footer_link_content_5>a{
+  padding:3px 10px 3px 10px;
+  border-right:1px solid gray;
+  font-size: 15px;
+}
