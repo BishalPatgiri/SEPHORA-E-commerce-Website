@@ -305,3 +305,6 @@ a:hover{
     border-right:1px solid gray;
     font-size: 15px;
 }
+#log>div{
+    display: flex;
+}

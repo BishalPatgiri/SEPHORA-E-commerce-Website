@@ -63,3 +63,10 @@ mySephoraArr.forEach(function(elem){
     data.innerText=elem;
     document.querySelector("#footer_link_content_5").append(data)
 })
+
+var login=localStorage.getItem("logIn")
+var data=JSON.parse(localStorage.getItem("data"))
+if(login=="Yes")
+{
+    document.querySelector("#log").innerText=data.name;
+}
