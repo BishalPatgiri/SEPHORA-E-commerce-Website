@@ -1,0 +1,87 @@
+#first{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between
+}
+h2{
+    background-color: rgb(33, 71, 207);
+    padding-left: 5%;
+    padding-top: 1%;
+    height: 40px;
+    color: white;
+}
+#first>p{
+    
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#name{
+    border: 0;
+
+}
+#body td{
+    padding-right: 80px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+table{
+    width: 100%;
+    line-height: 4px;
+}
+
+img{
+    height: 100px;
+    width: 100px;
+}
+#btn>p{
+    text-decoration: underline;
+    margin-right: 10px;
+    cursor: pointer;
+}
+#qty>p{
+    margin-right: 10px;
+}
+button{
+    width: 100%;
+    height: 50px;
+    border: 0;
+}
+button:hover{
+    color: rgb(185, 25, 214);
+}
+#content{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+#content>div{
+    width: 30%;
+
+}
+#left_div>div{
+    background-color: rgb(245, 237, 237);
+    margin-top: 50px;
+}
+#overview{
+    width: 90%;
+    margin: auto;
+}
+#checkout{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    background-color: rgb(245, 52, 103);
+    color: white;
+    font-weight: bold;
+    border: 0;
+    cursor: pointer;
+}
+#seemore{
+    border: 2px solid black;
+    font-weight: bold;
+    background-color: white;
+    cursor: pointer;
+}
