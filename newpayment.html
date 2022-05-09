@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+   h2{
+       padding-left: 12%;
+       letter-spacing: 4px;
+       color: rgb(68, 65, 65);
+   }
+   
+   .firstrow {
+    display: flex;
+    padding-left: 12%;
+    color: white;
+    background-color: rgb(50, 152, 210);
+   font-size: 20px;
+
+  }
+  .firstrow>a{
+      text-decoration: none;
+      color: white;
+      margin-top: 2%;
+      margin-right: 10px;
+      /* margin-bottom: 2%; */
+  }
+  h3+a{
+      margin-left: 30%;
+  }
+  a:hover {
+    /* background-color: palevioletred; */
+    border-bottom: 4px solid red;
+
+  }
+
+
+  .cardet {
+      margin-top: 10px;
+      padding-left: 45px;
+  }
+
+   #gname {
+   margin-top: -20px;
+   }
+
+   .thirdrow{
+       display: flex;
+   }
+
+ .hrsk {
+    padding-left: 12%;
+    margin-top: 30px;
+}
+
+.title {
+  font-weight: bolder;
+  display: flex;   
+}
+.title>h3{
+    margin-right: 10px;
+}
+
+.last {
+    width: 51%;
+    width: 58%;
+    text-align: center;
+    background-color: rgb(230, 17, 191);
+    color: white;
+    font-size: 20px;
+    font-style: solid;
+    height: 40px;  
+    padding-top: 1%;
+}
+.last>a{
+    text-decoration: none;
+    color: white;
+}
+#last_nav{
+    display: flex;
+    padding-left: 12%;
+    justify-content: space-between;
+    margin-top: 80px;
+    background-color: rgb(247, 233, 233);
+}
+#last_nav>div{
+    display: flex;
+}
+#last_nav>div>p{
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+#last_nav>div>img{
+    margin-right: 30px;
+    height: 30px;
+    padding-top: 10px;
+}
+    </style>
+</head>
+
+
+
+<body>
+    
+    <!-- <div class="Cards"> -->
+           <h2>SEPHORA</h2>
+    <!-- </div> -->
+    <div class="firstrow">
+        <h3>CHECKOUT</h3>
+        <a href="">Shipping</a>
+        <a href="newpayment.html">Payment</a>
+       
+    </div>
+
+<div class="hrsk">
+        <div class="title">
+                <h3>TOTAL AMOUNT PAYABLE -</h3>
+                <h3 id="pay"></h3>       
+        </div>
+
+     <h3>PAYMENT METHOD</h3>
+    <div id='head' style='padding: 10px;'>
+        <label for='option-1' style=' padding: 5px; font-size: 1rem;'>
+        <input type='radio' name='option' value='card' style='transform: scale(1.2); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+        Credit / Debit Card</label>
+    </div>
+
+    <div class="cardet">
+        <label for="fname">Enter your card number (Visa, Mastercard, Amex)</label>
+
+        <br><br>
+
+        <input type="text" style="padding:10px"; id="gname" name="gname" minlength="15" maxlength="16" size="100%">
+        <br><br>
+
+        <label for="fname" >Enter Name on Card</label>
+        <br><br>
+
+        <input type="text" style="padding:10px"; id="gname" name="gname" maxlength="16" size="100%">
+        <br><br>
+        
+        <label for="pin">CVV</label>
+        <input type="text" id="cvv" name="cvv" maxlength="3" size="3" style="padding:10px">
+        <br><br>
+
+    
+
+        <div class="thirdrow">
+            <label for="fname" >Exp. Date_  </label>
+            <div class="selection">
+            <div class="date">
+            <select name="months" id="months">
+                <option value="Jan">Jan</option>
+                <option value="Feb">Feb</option>
+                <option value="Mar">Mar</option>
+                <option value="Apr">Apr</option>
+                <option value="May">May</option>
+                <option value="Jun">Jun</option>
+                <option value="Jul">Jun</option>
+                <option value="Aug">Aug</option>
+                <option value="Sep">Sep</option>
+                <option value="Oct">Oct</option>
+                <option value="Nov">Nov</option>
+                <option value="Dec">De</option>
+            </select>
+            <select name="Years" id="Years">
+                <option value="2022">2022</option>
+                <option value="2021">2023</option>
+                <option value="2020">2024</option>
+                <option value="2019">2025</option>
+                <option value="2018">2026</option>
+                <option value="2017">2027</option>
+                <option value="2016">2028</option>
+            </select>
+            </div>
+            </div> 
+            <br>
+        </div>
+        <br>
+    </div>
+
+
+    <div id='block-11' style='padding: 10px;'>
+        <label for='option-11' style=' padding: 5px; font-size: 1rem;'>
+        <input type='radio' name='option' value='card' style='transform: scale(1.2); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+        Net Banking</label>
+    </div>
+
+    <div id='block-11' style='padding: 10px;'>
+        <label for='option-11' style=' padding: 5px; font-size: 1rem;'>
+        <input type='radio' name='option' value='card' style='transform: scale(1.2); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+        Paytm Wallet</label>
+    </div>
+
+    <div id='block-11' style='padding: 10px;'>
+        <label for='option-11' style=' padding: 5px; font-size: 1rem;'>
+        <input type='radio' name='option' value='card' style='transform: scale(1.2); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+        Other Wallets</label>
+    </div>
+
+    <div id='block-11' style='padding: 10px;'>
+        <label for='option-11' style=' padding: 5px; font-size: 1rem;'>
+        <input type='radio' name='option' value='card' style='transform: scale(1.2); margin-right: 10px; vertical-align: middle; margin-top: -2px;' />
+        UPI</label>
+    </div>
+
+    <div class="last">
+        <a href="otp.html" ><strong>PLACE ORDER</strong></a>
+    </div>
+</div>
+<div id="last_nav">
+    <div>
+        <img src="https://static.nnnow.com/Verified_by_Visa_logo.png" alt="">
+        <img src="https://static.nnnow.com/verified-mastercard.png" alt="">
+        <img src="https://static.nnnow.com/verified-pci.png" alt="">
+        <img src="https://static.nnnow.com/AMEX-safekey.png" alt="">
+    </div>
+    <div>
+        <p>2022 NNNOW</p>
+        <p>Privacy Policy</p>
+        <p>Terms and Conditions</p>
+    </div>
+</div>
+
+
+
+</body>
+</html>
+
+<script>
+    document.querySelector("#pay").innerText=JSON.parse(localStorage.getItem("total"))
+</script>
+
