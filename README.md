@@ -4,7 +4,7 @@
 * HTML
 * CSS
 * BootStarp
-* Advance JavaScript
+* JavaScript
 #### In this clone we have included most of the functionalities of the original website. The functionalities that we have implemented in this projects are:
 * Home Page
      * Home Page has all the categories of products along with the latest offers.
@@ -16,8 +16,17 @@
      * It has a feature to reset the password also.
 * The Product Page
      * There are basically 6 product pages of differnt category.
-     * Each page has some feature to sort the product from Low to Hign rating, Price etc.
-     * Each Page has a feature to filter the products according to their rating also.
+     * Each page has all the details of the Products.
+     * Each Page has the feature to add the product to the cart.
+     * Once added to the cart there will be an alert also that the product is added to the cart.
+* The Cart Page
+     * This page has all the infomation of the products that are added form the product pages.
+     * You can Remove a Product from the cart also.
+     * It has a promo code option also by applying which we can have a 30 % discount.(code- masai30).
+* The Payment Page
+     * The Payment page has options to select different payment option.(only debit card option is usesable)
+     * After filling debit card details there is a feature to get the OTP.
+     * In the OTP page we need to give the OTP to make the payment successful.(OTP-1111)
 
      
 
