@@ -1,6 +1,6 @@
 # SEPHORA E-Commerce Website
-### This is basicaaly the clone of the original SEPHORA website.
-#### We have used the followeing concepts in this project:
+### This is basically the clone of the original SEPHORA website.
+#### We have used the following Tech Skills in this project:
 * HTML
 * CSS
 * BootStarp
